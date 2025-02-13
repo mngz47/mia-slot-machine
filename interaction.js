@@ -15,15 +15,16 @@ document.getElementById("leave").addEventListener("click", quit, false);
 
 function processForm(event) {
 	event.preventDefault();
-    if (coins.value > 0) {
+   
         coins.disabled = true;
         coinsButton.disabled = true;
-        coinsLabel.innerHTML = Number(coins.value);
+    //    coinsLabel.innerHTML = Number(coins.value);
+	coinsLabel.innerHTML = credits;
         coins.value = 0;
         let li = document.createElement("li");
         li.innerHTML = `Has introducido ${coinsLabel.innerHTML} monedas.`;
         historicalContainer.appendChild(li);
-    }
+    
 }
 
 function quit() {
