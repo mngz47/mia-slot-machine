@@ -76,6 +76,9 @@ function calculateScore(number, array) {
             numberToAdd = calculateDollar(number);
         }
     }
+
+	syncCredits(numberToAdd);
+	
     if (feedbackText) {
         let li = document.createElement("li");
         li.innerHTML = feedbackText;
